@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "dev": "ts-node ./src/app.ts",
+    "start": "node ./dist/app.js",
+    "build": "tsc",
+    "dev": "nodemon ./src/app.ts",
     "test": "mocha --require ts-node/register --watch-extensions ts 'tests/**/*.spec.ts' --timeout 40000"
   },
   "dependencies": {
@@ -17,9 +18,10 @@
     "faker": "^5.5.3",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.3",
-    "mongoose-paginate-v2": "^1.3.17",
+    "mongoose-paginate-v2": "^1.7.1",
     "morgan": "~1.9.1",
-    "redis": "^3.1.1"
+    "redis": "^3.1.1",
+    "socket.io": "^4.5.3"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.1",

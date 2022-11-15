@@ -4,6 +4,5 @@ export default class Pageable<T> {
         public pageSize: number,
         public totalPages: number,
         public data: T[]
-
-    ) {}
+    ) { }
 }
